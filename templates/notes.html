@@ -9,19 +9,19 @@
 {% endblock %}
 
 {% block body %}
-    <h1><ul>
-        {% for note in notelist %}
-        <li>{{ note }}</li>
-        {% endfor %}
-    </ul></h1>
+    
     <form action="{{ url_for('notes') }}" method="POST">
         <input placeholder="Type Notes" type="text" name="note"/>
         <button>Submit</button>
     </form>
-    
-
     <br>
+
     <h3>
-       <a href="{{ url_for('index') }}">Home</a>
+        <ul>
+        {% for note in notelist|reverse %}
+        <li>{{ note }}</li>
+        {% endfor %}
+        </ul>
     </h3>
+
 {% endblock %}

@@ -9,15 +9,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1>
+    <h3>
         <ul>
            {% for name in names %}
              <li>{{name}}</li>
             {% endfor %}
        </ul>
-    </h1>
-    <h3><a href="{{ url_for('notes') }}">Notes</a></h3>
-    <h3>
-        <a href="{{ url_for('result') }}">Square</a>
     </h3>
+    
 {% endblock %}

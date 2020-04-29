@@ -42,6 +42,7 @@ def result():
 def notes():   
     if request.method == "POST":
         note=request.form.get("note")
-        notelist.append(note)
-        
+        notelist.append(note)  
     return render_template("notes.html",notelist=notelist)
+
+
