@@ -7,6 +7,7 @@
                 text-decoration: none !important;
                 }
         </style>
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="icon" href="static/favicon.ico" type="image/x-icon">
     </head>
@@ -14,8 +15,8 @@
     <body class="container">
         <header class="jumbotron ">
            <a class="non-underline-link display-4 text-success" href="{{ url_for('index') }}">
-               <div><img src="/static/logo.png" width="25%"> Microsoft.sucks</div>
-            </a>
+               <img src="/static/logo.png" width="150" >ItsGuruDev
+           </a>
         </header>
         <h1>{% block heading %}{% endblock %}</h1>
 
@@ -23,10 +24,10 @@
         {% endblock %}
 
         <br><br>
-        <footer>© ItsGuruDev 2020 
+        <footer>© ItsGuruDev 2020
             <a href="{{ url_for('index') }}">Home</a> | <a href="{{ url_for('notes') }}">Notes</a> | <a href="{{ url_for('result') }}">Square</a>
-    
+
         </footer>
-        
+
     </body>
 </html>

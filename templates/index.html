@@ -11,8 +11,13 @@
 {% block body %}
     <h3>
         <ul>
-           {% for name in names %}
-             <li>{{name}}</li>
+           {% for name in names|reverse %}
+             <li>{% if 'http' in name %}
+                    <a href="{{name}}" target=”_blank>{{name}}</a>
+                 {% else %}
+                   {{name}}
+                 {% endif %}
+                </li>
             {% endfor %}
        </ul>
     </h3>

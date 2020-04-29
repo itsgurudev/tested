@@ -12,7 +12,7 @@ notelist=[]
 
 @app.route('/')
 def index():
-    names=["ok", "fine", "stop", "this"]
+    names=notelist
     return render_template("index.html", names=names)
 
 @app.route('/bye')

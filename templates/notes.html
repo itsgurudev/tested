@@ -19,7 +19,12 @@
     <h3>
         <ul>
         {% for note in notelist|reverse %}
-        <li>{{ note }}</li>
+        <li>{% if 'http' in note %}
+              <a href="{{note}}" target=”_blank>{{note}}</a>
+            {% else %}
+              {{note}}
+            {% endif %}
+        </li>
         {% endfor %}
         </ul>
     </h3>
