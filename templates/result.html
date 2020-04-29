@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    easy calcutation
+{% endblock %}
+
+{% block heading %}
+    Calculation Page!
+{% endblock %}
+
+{% block body %}
+    <form action="{{ url_for('result') }}" method="POST">
+        <input placeholder="Enter Number" type="number" step="any" name="num"/>
+        <button>Submit</button>
+    </form>
+    <h2>{{ num }}² = {{ result }}</h2>
+
+    <br>
+    <h3>
+       <a href="{{ url_for('index') }}">Home</a>
+    </h3>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Taking Notes is Easy AF
+{% endblock %}
+
+{% block heading %}
+    Your Notes Are Here:
+{% endblock %}
+
+{% block body %}
+    <h1><ul>
+        {% for note in notelist %}
+        <li>{{ note }}</li>
+        {% endfor %}
+    </ul></h1>
+    <form action="{{ url_for('notes') }}" method="POST">
+        <input placeholder="Type Notes" type="text" name="note"/>
+        <button>Submit</button>
+    </form>
+    
+
+    <br>
+    <h3>
+       <a href="{{ url_for('index') }}">Home</a>
+    </h3>
+{% endblock %}
